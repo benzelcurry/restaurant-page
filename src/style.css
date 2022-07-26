@@ -3,6 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #f3e3f2;
 }
 
 #content {
@@ -16,6 +17,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 75px;
+    background-color: #f3e3f2;
 }
 
 .resto-name {
@@ -35,7 +37,7 @@ body {
 
 .link {
     display: flex;
-    background-color: white;
+    background-color: #f3e3f2;
     font-family: 'Courier New', Courier, monospace;
     border-left: solid 2px black;
     justify-content: center;
@@ -45,7 +47,7 @@ body {
 
 .link:hover {
     cursor: pointer;
-    background-color: #e9e6e6;
+    background-color: #fadcf8;
 }
 
 /* body - home */
