@@ -12,7 +12,7 @@ body {
 /* header */
 .header {
     display: flex;
-    border: solid 3px black;
+    border: solid 2px black;
     align-items: center;
     justify-content: space-between;
     height: 75px;
@@ -33,7 +33,7 @@ body {
     display: flex;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
-    border-left: solid 3px black;
+    border-left: solid 2px black;
     justify-content: center;
     align-items: center;
     padding: 10px;
