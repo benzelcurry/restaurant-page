@@ -1,6 +1,7 @@
 import './style.css';
 import switchHome from './home.js';
 import switchMenu from './menu.js';
+import switchLocation from './locations.js';
 
 let content = document.querySelector('#content');
 
@@ -47,3 +48,9 @@ link1.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     switchMenu();
 });
+
+// Switches to location page on click
+link2.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    switchLocation();
+})
