@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 2px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 2px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 2px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.resto-name:hover {\n    cursor: pointer;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 2px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body - home */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}\n\n/* body - menu */\n.menu {\n    display: grid;\n    align-self: center;\n    justify-self: center;\n    padding: 10px;\n    margin-top: 250px;\n    font-size: 32px;\n}\n\n.menu-item {\n    border-bottom: solid 2px grey;\n    padding: 20px;\n    text-align: center;\n}\n\n.fifth-item {\n    padding: 20px;\n    text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -485,28 +485,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function switchHome() {
     // Create elements to be used on main page
-    let header = document.createElement('div');
-    header.classList.add('header');
-
-    let restoName = document.createElement('div');
-    restoName.classList.add('resto-name');
-    restoName.innerText = 'Meatery.';
-
-    let links = document.createElement('div');
-    links.classList.add('links');
-
-    let link1 = document.createElement('div');
-    link1.classList.add('link');
-    link1.innerText = 'Menu';
-
-    let link2 = document.createElement('div');
-    link2.classList.add('link');
-    link2.innerText = 'Locations';
-
-    let link3 = document.createElement('div');
-    link3.classList.add('link');
-    link3.innerText = 'Contact';
-
     let mainContent = document.createElement('div');
     mainContent.classList.add('main-content');
 
@@ -524,13 +502,6 @@ function switchHome() {
     bodyText.innerText = 'Here at Meatery, we like to make sure everyone is     welcomed with open arms to a front row ticket to the meat show.'
 
     // Lay everything out on the page.
-    content.appendChild(header);
-    header.appendChild(restoName);
-    header.appendChild(links);
-    links.appendChild(link1);
-    links.appendChild(link2);
-    links.appendChild(link3);
-
     content.appendChild(mainContent);
     mainContent.appendChild(foodPhoto);
     foodPhoto.appendChild(img);
@@ -542,6 +513,48 @@ function switchHome() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fa414484aeade2edda8d.jpg";
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ switchMenu)
+/* harmony export */ });
+function switchMenu() {
+    // Create elements to be used on menu page
+    let menu = document.createElement('div');
+    menu.classList.add('menu');
+
+    let firstItem = document.createElement('div');
+    firstItem.classList.add('menu-item');
+    firstItem.innerText = 'Chicken biryani - $17';
+
+    let secondItem = document.createElement('div');
+    secondItem.classList.add('menu-item');
+    secondItem.innerText = 'Porkchops - $19';
+
+    let thirdItem = document.createElement('div');
+    thirdItem.classList.add('menu-item');
+    thirdItem.innerText = 'Tomahawk steak - $52';
+
+    let fourthItem = document.createElement('div');
+    fourthItem.classList.add('menu-item');
+    fourthItem.innerText = 'Surf \'n\' turf - $71';
+
+    let fifthItem  = document.createElement('div');
+    fifthItem.classList.add('fifth-item');
+    fifthItem.innerText = 'Wild salmon - $31';
+
+    // Lay everything out on page
+    content.appendChild(menu);
+    menu.appendChild(firstItem);
+    menu.appendChild(secondItem);
+    menu.appendChild(thirdItem);
+    menu.appendChild(fourthItem);
+    menu.appendChild(fifthItem);
+}
 
 /***/ })
 /******/ 	]);
@@ -655,12 +668,56 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
+
 
 
 
 let content = document.querySelector('#content');
 
+let header = document.createElement('div');
+header.classList.add('header');
+
+let restoName = document.createElement('div');
+restoName.classList.add('resto-name');
+restoName.innerText = 'Meatery.';
+
+let links = document.createElement('div');
+links.classList.add('links');
+
+let link1 = document.createElement('div');
+link1.classList.add('link');
+link1.innerText = 'Menu';
+
+let link2 = document.createElement('div');
+link2.classList.add('link');
+link2.innerText = 'Locations';
+
+let link3 = document.createElement('div');
+link3.classList.add('link');
+link3.innerText = 'Contact';
+
+// Set up header
+content.appendChild(header);
+header.appendChild(restoName);
+header.appendChild(links);
+links.appendChild(link1);
+links.appendChild(link2);
+links.appendChild(link3);
+
+// Opens to home page by default
 (0,_home_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+restoName.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+})
+
+// Switches to menu page on click
+link1.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    (0,_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+});
 })();
 
 /******/ })()
