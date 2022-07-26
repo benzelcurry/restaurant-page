@@ -2,6 +2,7 @@ import './style.css';
 import switchHome from './home.js';
 import switchMenu from './menu.js';
 import switchLocation from './locations.js';
+import switchContact from './contact';
 
 let content = document.querySelector('#content');
 
@@ -53,4 +54,10 @@ link1.addEventListener('click', () => {
 link2.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     switchLocation();
+})
+
+// Switches to contact page on click
+link3.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    switchContact();
 })
