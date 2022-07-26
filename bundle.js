@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 2px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.resto-name:hover {\n    cursor: pointer;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 2px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body - home */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}\n\n/* body - menu */\n.menu {\n    display: grid;\n    align-self: center;\n    justify-self: center;\n    padding: 10px;\n    margin-top: 250px;\n    font-size: 32px;\n}\n\n.menu-item {\n    border-bottom: solid 2px grey;\n    padding: 20px;\n    text-align: center;\n}\n\n.fifth-item {\n    padding: 20px;\n    text-align: center;\n}\n\n/* body - location */\n.location-container {\n    display: flex;\n    height: 500px;\n    width: 500px;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    justify-self: center;\n    gap: 15px;\n}\n\n.svg {\n    width: 15%;\n    height: auto;\n}\n\n.location {\n    font-size: 24px;\n    text-align: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 2px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.resto-name:hover {\n    cursor: pointer;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 2px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body - home */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}\n\n/* body - menu */\n.menu {\n    display: grid;\n    align-self: center;\n    justify-self: center;\n    padding: 10px;\n    margin-top: 250px;\n    font-size: 32px;\n}\n\n.menu-item {\n    border-bottom: solid 2px grey;\n    padding: 20px;\n    text-align: center;\n}\n\n.fifth-item {\n    padding: 20px;\n    text-align: center;\n}\n\n/* body - location */\n.location-container,\n.contact-container {\n    display: flex;\n    height: 500px;\n    width: 500px;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    justify-self: center;\n    gap: 15px;\n}\n\n.svg,\n.call-icon {\n    width: 15%;\n    height: auto;\n}\n\n.location,\n.contact {\n    font-size: 24px;\n    text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -593,6 +593,43 @@ function switchLocation() {
 
 module.exports = __webpack_require__.p + "2f059afe05723edb3a73.svg";
 
+/***/ }),
+/* 16 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ switchContact)
+/* harmony export */ });
+/* harmony import */ var _photos_call_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
+
+
+function switchContact() {
+    // Create elements for page
+    let contactContainer = document.createElement('div');
+    contactContainer.classList.add('contact-container');
+
+    let img = document.createElement('img');
+    img.src = _photos_call_svg__WEBPACK_IMPORTED_MODULE_0__;
+    img.alt = 'Call icon';
+    img.classList.add('call-icon');
+
+    let contact = document.createElement('div');
+    contact.classList.add('contact');
+    contact.innerText = 'Call us at: (678) 999-8212';
+
+    // Add elements to page
+    content.appendChild(contactContainer);
+    contactContainer.appendChild(img);
+    contactContainer.appendChild(contact);
+}
+
+/***/ }),
+/* 17 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "02af061e66783ca2006e.svg";
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -707,6 +744,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
 /* harmony import */ var _locations_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
+/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
+
 
 
 
@@ -762,6 +801,12 @@ link1.addEventListener('click', () => {
 link2.addEventListener('click', () => {
     content.removeChild(content.lastChild);
     (0,_locations_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+})
+
+// Switches to contact page on click
+link3.addEventListener('click', () => {
+    content.removeChild(content.lastChild);
+    (0,_contact__WEBPACK_IMPORTED_MODULE_4__["default"])();
 })
 })();
 
