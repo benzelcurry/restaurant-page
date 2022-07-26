@@ -1,0 +1,66 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content {
+    display: grid;
+}
+
+/* header */
+.header {
+    display: flex;
+    border: solid 3px black;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+}
+
+.resto-name {
+    padding: 10px;
+    font-size: 32px;
+}
+
+.links {
+    display: grid;
+    align-self: stretch;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.link {
+    display: flex;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-left: solid 3px black;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.link:hover {
+    cursor: pointer;
+    background-color: #e9e6e6;
+}
+
+/* body */
+.main-content {
+    display: grid;
+    grid-template-columns: 500px auto;
+    padding: 100px 50px 0px 100px;
+}
+
+.food {
+    width: 450px;
+    height: auto;
+}
+
+.body-text {
+    padding-left: 20px;
+    font-size: 32px;
+    font-style: italic;
+    align-self: center;
+    justify-self: start;
+    max-width: 600px;
+}
