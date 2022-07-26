@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 3px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 3px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    width: 100vw;\n    height: 100vh;\n    margin: 0;\n    font-family: 'Courier New', Courier, monospace;\n}\n\n#content {\n    display: grid;\n}\n\n/* header */\n.header {\n    display: flex;\n    border: solid 2px black;\n    align-items: center;\n    justify-content: space-between;\n    height: 75px;\n}\n\n.resto-name {\n    padding: 10px;\n    font-size: 32px;\n}\n\n.links {\n    display: grid;\n    align-self: stretch;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.link {\n    display: flex;\n    background-color: white;\n    font-family: 'Courier New', Courier, monospace;\n    border-left: solid 2px black;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n}\n\n.link:hover {\n    cursor: pointer;\n    background-color: #e9e6e6;\n}\n\n/* body */\n.main-content {\n    display: grid;\n    grid-template-columns: 500px auto;\n    padding: 100px 50px 0px 100px;\n}\n\n.food {\n    width: 450px;\n    height: auto;\n}\n\n.body-text {\n    padding-left: 20px;\n    font-size: 32px;\n    font-style: italic;\n    align-self: center;\n    justify-self: start;\n    max-width: 600px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -474,6 +474,71 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ switchHome)
+/* harmony export */ });
+/* harmony import */ var _photos_food_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+
+
+function switchHome() {
+    // Create elements to be used on main page
+    let header = document.createElement('div');
+    header.classList.add('header');
+
+    let restoName = document.createElement('div');
+    restoName.classList.add('resto-name');
+    restoName.innerText = 'Meatery.';
+
+    let links = document.createElement('div');
+    links.classList.add('links');
+
+    let link1 = document.createElement('div');
+    link1.classList.add('link');
+    link1.innerText = 'Menu';
+
+    let link2 = document.createElement('div');
+    link2.classList.add('link');
+    link2.innerText = 'Locations';
+
+    let link3 = document.createElement('div');
+    link3.classList.add('link');
+    link3.innerText = 'Contact';
+
+    let mainContent = document.createElement('div');
+    mainContent.classList.add('main-content');
+
+    let foodPhoto = document.createElement('div');
+    foodPhoto.classList.add('food-photo');
+
+    let img = document.createElement('img');
+    //issue with finding the source image; check previous tutorials for inserting images
+    img.src = _photos_food_jpg__WEBPACK_IMPORTED_MODULE_0__;
+    img.alt = "Chicken biryani";
+    img.classList.add('food');
+
+    let bodyText = document.createElement('div');
+    bodyText.classList.add('body-text');
+    bodyText.innerText = 'Here at Meatery, we like to make sure everyone is     welcomed with open arms to a front row ticket to the meat show.'
+
+    // Lay everything out on the page.
+    content.appendChild(header);
+    header.appendChild(restoName);
+    header.appendChild(links);
+    links.appendChild(link1);
+    links.appendChild(link2);
+    links.appendChild(link3);
+
+    content.appendChild(mainContent);
+    mainContent.appendChild(foodPhoto);
+    foodPhoto.appendChild(img);
+    mainContent.appendChild(bodyText);
+}
+
+/***/ }),
+/* 12 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fa414484aeade2edda8d.jpg";
@@ -589,66 +654,13 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _photos_food_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
 
 
 let content = document.querySelector('#content');
 
-console.log("Hello");
-
-// Create elements to be used on main page
-let header = document.createElement('div');
-header.classList.add('header');
-
-let restoName = document.createElement('div');
-restoName.classList.add('resto-name');
-restoName.innerText = 'Meatery.';
-
-let links = document.createElement('div');
-links.classList.add('links');
-
-let link1 = document.createElement('div');
-link1.classList.add('link');
-link1.innerText = 'Menu';
-
-let link2 = document.createElement('div');
-link2.classList.add('link');
-link2.innerText = 'Locations';
-
-let link3 = document.createElement('div');
-link3.classList.add('link');
-link3.innerText = 'Contact';
-
-let mainContent = document.createElement('div');
-mainContent.classList.add('main-content');
-
-let foodPhoto = document.createElement('div');
-foodPhoto.classList.add('food-photo');
-
-let img = document.createElement('img');
-//issue with finding the source image; check previous tutorials for inserting images
-img.src = _photos_food_jpg__WEBPACK_IMPORTED_MODULE_1__;
-img.alt = "Chicken biryani";
-img.classList.add('food');
-
-let bodyText = document.createElement('div');
-bodyText.classList.add('body-text');
-bodyText.innerText = 'Here at Meatery, we like to make sure everyone is     welcomed with open arms to a front row ticket to the meat show.'
-
-// Lay everything out on the page.
-content.appendChild(header);
-header.appendChild(restoName);
-header.appendChild(links);
-links.appendChild(link1);
-links.appendChild(link2);
-links.appendChild(link3);
-
-content.appendChild(mainContent);
-mainContent.appendChild(foodPhoto);
-foodPhoto.appendChild(img);
-mainContent.appendChild(bodyText);
-
+(0,_home_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 })();
 
 /******/ })()
