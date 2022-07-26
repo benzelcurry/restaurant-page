@@ -1,3 +1,6 @@
+import './style.css';
+import Food from './photos/food.jpg';
+
 let content = document.querySelector('#content');
 
 console.log("Hello");
@@ -33,7 +36,7 @@ foodPhoto.classList.add('food-photo');
 
 let img = document.createElement('img');
 //issue with finding the source image; check previous tutorials for inserting images
-img.src = "photos/food.jpg";
+img.src = Food;
 img.alt = "Chicken biryani";
 img.classList.add('food');
 
